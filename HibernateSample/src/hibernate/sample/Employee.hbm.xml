@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="hibernate.sample.Employee" table="EMPLOYEE">
+   <id column="EM_ID" name="id" type="long">
+      <generator class="sequence">
+        <param name="sequence">EM_SQ_ID</param>
+     </generator>
+    </id>
+    <property name="employeeCode" column="EM_CODE" type="string"/>
+    <property name="employeeName" column="EM_NAME" type="string"/>
+    <property name="employeeDepartment" column="EM_DEPARTMENT" type="string"/>
+    <property name="employeeDOJ" column="EM_DATE_OF_JOINING" type="java.util.Date"/>
+  </class>
+</hibernate-mapping>
